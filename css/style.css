@@ -1,0 +1,184 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: #eee;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 8rem;
+}
+
+.circel {
+    width: 50rem;
+    height: 50rem;
+    position: absolute;
+    
+    border-radius: 50%;
+}
+
+.circel-first{
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #3BACB6,30%, #F73D93);
+}
+
+.circel-second {
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #EB5353,80%, #FFD24C);
+
+}
+
+.card {
+    height: 45rem;
+    width: 35rem;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+    position: relative;
+    background: #eee;
+}
+
+.card::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(#EB5353, #FFD24C, #3BACB6, #F73D93);
+    z-index: -1;
+    animation-name: rainbow;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.card-figure {
+    width: 100%;
+    height: 30%;
+}
+
+.card-figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.card-body {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card-categories {
+    display: flex;
+    gap: 0.7rem;
+}
+.card-category{
+    list-style: none;
+    color: white;
+    font-size: 70%;
+    padding: 0.5rem 2rem;
+    border-radius: 5rem;
+}
+
+.card-h2 {
+    font-size: 90%;
+}
+
+.card-paragraph {
+    font-size: 80%;
+    font-weight: 500;
+}
+
+.card--controller {
+    background: #3BACB6;
+}
+
+.card--ps4 {
+    background: #EB5353;
+}
+
+.card--ps5 {
+    background: #FFD24C;
+}
+
+.card--wat {
+    background: #646FD4;
+}
+
+.card--boeein {
+    background: #16003B;
+}
+
+.card--okay {
+    background: #9900F0;
+}
+
+.card-footer {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+    gap: 1rem;
+    align-items: center;
+}
+
+.card--pf {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-footer h3 {
+    font-size: 90%;
+    font-weight: 300;
+}
+
+.card-footer p{
+    font-size: 70%;
+    font-weight: 300;
+}
+
+
+@media screen and (max-width: 75rem) {
+    body{
+        padding: 2rem;
+    }
+    .card {
+        height: auto;
+    }
+    .circel {
+        display: none;
+    }
+    
+}
+
+
+@keyframes rainbow {
+    from {
+        filter: blur(10rem);
+    }
+    to {
+        filter: blur(00.5rem);
+
+    }
+}
+
